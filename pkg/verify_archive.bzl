@@ -69,10 +69,10 @@ _gen_verify_archive_test_main = rule(
             doc = """List of regexes that must not be in the archive.""",
         ),
         "min_size": attr.int(
-            doc = """Miniumn number of entries in the archive."""
+            doc = """Minimum number of entries in the archive."""
         ),
         "max_size": attr.int(
-            doc = """Miniumn number of entries in the archive."""
+            doc = """Maximum number of entries in the archive."""
         ),
 
         # Implicit dependencies.
@@ -86,7 +86,8 @@ _gen_verify_archive_test_main = rule(
 def verify_archive_test(name, target,
                         must_contain=None, must_contain_regex=None,
                         must_not_contain=None, must_not_contain_regex=None,
-                        min_size=1, max_size=-1):
+                        min_size=1, 
+                        =-1):
     """Tests that an archive contains specific file patterns.
 
     This test is used to verify that an archive contains the expected content.
